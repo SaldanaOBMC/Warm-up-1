@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+</head>
+
+
+<body>
+
+<div class="box">
+<h2>ADDITION</h2>
+
+<input type="number" id="num1" placeholder="Enter First Number">
+<input type="number" id="num2" placeholder="Enter Second Number">
+<br>
+
+<button onclick="Sum()">Calculate</button>
+
+<div id="Addresult"></div>
+
+</div>
+
+    <h2>SUBTRACTION</h2>
+    <input type="number" id="sub1" placeholder="First number">
+    <input type="number" id="sub2" placeholder="Second number">
+    <br>
+
+    <button onclick="Dif()">CALCULATE</button>
+
+    <div id="Subresult"></div>
+
+    <h2>MULTIPLICATION</h2>
+    <input type="number" id="mul1" placeholder="First number">
+    <input type="number" id="mul2" placeholder="Second number">
+    <br>
+    <button onclick="Prod()">CALCULATE</button>
+
+    <div id="Mulresult"></div>
+
+    <h2>DIVISION</h2>
+    <input type="number" id="div1" placeholder="First number">
+    <input type="number" id="div2" placeholder="Second number">
+    <br>
+
+    <button onclick="Quot()">CALCULATE</button>
+
+    <div id="divResult"></div>
+
+<script>
+    function Sum(){
+        let n1 = Number(document.getElementById("num1").value);
+        let n2 = Number(document.getElementById("num2").value);
+
+        let Res_sum = n1+n2;
+
+        document.getElementById("Addresult").innerHTML = "Result" + Res_sum;
+
+    }
+
+    function Dif(){
+        let a = Number(document.getElementById("sub1").value);
+        let b = Number(document.getElementById("sub2").value);
+
+        let Res_sub = a - b;  
+
+    document.getElementById("Subresult").innerHTML = "Result: " + Res_sub;
+
+   }
+
+    function Prod(){
+      let a = Number(document.getElementById("mul1").value);
+      let b = Number(document.getElementById("mul2").value);
+
+      let Res_mul = a * b;
+
+    document.getElementById("Mulresult").innerHTML = "Result: " + Res_mul;
+   
+   }
+
+function Quot(){
+       let a = Number(document.getElementById("div1").value);
+       let b = Number(document.getElementById("div2").value);
+
+    let Res_div = b !== 0 ? a / b : "Cannot divide by zero";
+
+     document.getElementById("divResult").innerHTML = "Result: " + Res_div;
+
+    }
+
+</script>
+
+</body>
+</html>
